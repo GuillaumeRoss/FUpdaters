@@ -13,9 +13,12 @@ Data sources:
   - apps.json              : names, status, docs, coverage, footnote wiring.
 
 Usage:
-  python3 scripts/render_readme.py          # rewrite the two regions in README.md
-  python3 scripts/render_readme.py --check   # exit 1 if README.md is out of date
+  python3 scripts/render_readme.py            # rewrite the two regions in README.md
+  python3 scripts/render_readme.py --check     # exit 1 if README.md is out of date
+  python3 scripts/render_readme.py --dry-run   # print the diff README would get; exit 0
+                                               #   (still fails hard if apps.json <-> profile drift)
 """
+import difflib
 import json
 import plistlib
 import re
@@ -121,13 +124,27 @@ def replace_region(text, name, content):
 
 def main(argv):
     check = "--check" in argv[1:]
+    dry_run = "--dry-run" in argv[1:]
     profile = plistlib.load(open(PROFILE, "rb"))
     data = json.load(open(DATA))
+    # build() raises SystemExit if apps.json and the profile are out of sync,
+    # so parity is enforced in every mode (including --dry-run).
     table, footnotes = build(profile, data)
 
     current = open(README).read()
     updated = replace_region(current, "APPS_TABLE", table)
     updated = replace_region(updated, "FOOTNOTES", footnotes)
+
+    if dry_run:
+        diff = "\n".join(difflib.unified_diff(
+            current.splitlines(), updated.splitlines(),
+            "README.md (current)", "README.md (generated)", lineterm=""))
+        if diff:
+            print("README.md will be regenerated on merge to main:\n")
+            print(diff)
+        else:
+            print("README.md is already up to date.")
+        return 0
 
     if check:
         if updated != current:

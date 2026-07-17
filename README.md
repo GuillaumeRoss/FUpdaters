@@ -179,15 +179,16 @@ PRs welcome — especially new apps and live-test results for anything marked **
    - **`coverage`**: for `fleet` / `installomator` / `cask`, use the catalog's **slug/token** (string) so the `X` becomes a link — the Fleet output dir name, the Installomator label file name, or the Homebrew cask token. Use `true` if it's covered but has no per-app page (Alectrona is always `true`/`false`), or `false` if not covered. **Verify the link resolves (HTTP 200)** — some Installomator labels are aliases without their own file, and some Fleet records detect a different bundle ID than the app actually ships (see the CleanShot/Unarchiver footnotes).
    - **Footnotes** (optional): `"statusFootnotes": ["direct-build"]` adds a `[^direct-build]` marker to the Status cell; `"coverageFootnotes": {"fleet": ["fleet-cleanshot"]}` adds one to a coverage cell. Define the footnote text once in the top-level `"footnotes"` map in `apps.json`.
 
-3. **Regenerate and validate:**
+3. **Validate (optional, but encouraged):**
 
    ```
-   python3 scripts/render_readme.py          # rewrite the table + footnotes
-   python3 scripts/validate_profile.py       # lint the profile
-   python3 scripts/render_readme.py --check   # confirm README is in sync
+   python3 scripts/validate_profile.py         # lint the profile (valid plist, unique UUIDs)
+   python3 scripts/render_readme.py --dry-run   # preview the table your change produces
    ```
 
-CI runs the same checks on every PR (plus `plutil -lint`), so a PR that edits the profile or `apps.json` without regenerating the README — or that introduces a duplicate UUID — will fail.
+**You do not need to regenerate or commit the README yourself.** When you open a PR, CI lints the profile, enforces that `apps.json` and the profile stay in sync (matching slugs), and posts a preview of the new table in the check summary. When the PR is **merged to `main`, a workflow regenerates the README and commits it automatically**. (If you'd rather see the change in your own PR diff, run `python3 scripts/render_readme.py` locally and commit it — the merge step will just be a no-op.)
+
+A PR fails if the profile is an invalid plist, has a duplicate `PayloadUUID`/`PayloadIdentifier`, or if `apps.json` and the profile reference different sets of apps.
 
 ## License / usage
 
