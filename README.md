@@ -2,12 +2,17 @@
 
 **F updaters.** A macOS configuration profile (`FUpdaters.mobileconfig`) that disables as many built-in third-party auto-updaters as possible.
 
-I hate running a background service to update an app I rarely use (looking at you, Microsoft), but I find it equally annoying if less insulting to have apps constantly telling me an update is available when I have work to do, and tools to deal with those updates anyway.
+## Why
+I hate running a background service to update an app I rarely use (looking at you, Microsoft), but I find it equally annoying if less insulting to have apps constantly telling me an update is available when I have work to do, and tools to deal with those updates anyway. 
+
+This also helps protect against supply chain malware, provided your source has a cooldown period or other checks (hound them down if they don't!).
 
 The list of supported apps is heavily biased towards things I use, feel free to submit PRs for other apps, there isn't much downside to loading a profile blocking updaters for apps you do not have anyway.
 
+## Watch out
+
 > [!IMPORTANT]
-> Disabling an app's self-updater only makes sense if **something else** is keeping it patched. This profile only disables updaters for apps that have an **available** patching/install source (Alectrona, Fleet, Installomator, or Homebrew Cask — see Coverage columns). An available source proves an app is *patchable*; it does **not** prove you have active patch automation running. **If you disable an updater and nothing is actually updating the app, you will run vulnerable, out-of-date software.**
+> Disabling an app's self-updater only makes sense if **something else** is keeping it patched. This profile only disables updaters for apps that have an **available** patching/install source (Alectrona, Fleet, Installomator, or Homebrew Cask — see Coverage columns). **If you disable an updater and nothing is actually updating the app, you will run vulnerable, out-of-date software.**
 
 Customize the profile by deleting apps you don't have coverage for (or use `fupdaters.py`, below), or be aware they won't get updated.
 
@@ -33,16 +38,16 @@ The **Status** column reflects the *evidence* behind each payload, not a live be
 | **Untested** | A candidate key has been identified but **not** verified to actually stop the updater. Best-effort, pending live testing. |
 
 > [!NOTE]
-> A coverage link returning HTTP 200 only proves the app exists in that catalog — it is **not** evidence that the disable payload works. Payloads have not each been live-behavior-tested; see [Entries that still need live testing](#entries-that-still-need-live-testing).
+> I have not tested any of these seriously. For apps I do run, if I ever get an update pop-up again, I will fix the profiles. If you spot anything, feel free to submit an issue.
 
 ### Coverage columns
 
-- **Alectrona** — in the [Alectrona Patch Catalog](https://www.alectrona.com/patch-catalog)
-- **Fleet** — a [Fleet-maintained app](https://fmalibrary.com/)
+- **Alectrona** - in the [Alectrona Patch Catalog](https://www.alectrona.com/patch-catalog)
+- **Fleet** - a [Fleet-maintained app](https://fmalibrary.com/)
 - **Installomator** — has an [Installomator](https://github.com/Installomator/Installomator) label
-- **Cask** — ships as a [Homebrew Cask](https://formulae.brew.sh/cask/)
+- **Cask** - ships as a [Homebrew Cask](https://formulae.brew.sh/cask/)
 
-`X` links to the app's page in that catalog where one exists; `—` means it is not in that catalog. Coverage proves an app is **patchable by that tool**, not that it is *being* patched — you still need that tool actively running.
+`X` means it is part of the catalog, and where possible, links to the app's page in that catalog where one exists.
 
 ### App table
 
@@ -85,7 +90,7 @@ The **Status** column reflects the *evidence* behind each payload, not a live be
 | Tailscale | `io.tailscale.ipn.macsys` | `SUEnableAutomaticChecks=false`, `SUHasLaunchedBefore=true` | Sparkle [^direct-build] | [Sparkle](https://sparkle-project.org/documentation/) | X | [X](https://github.com/fleetdm/fleet/blob/main/ee/maintained-apps/outputs/tailscale-app/darwin.json) | [X](https://github.com/Installomator/Installomator/blob/main/fragments/labels/tailscale.sh) | [X](https://formulae.brew.sh/cask/tailscale-app) |
 | The Unarchiver | `com.macpaw.site.theunarchiver` | `SUEnableAutomaticChecks=false` | Sparkle [^direct-build] | [Sparkle](https://sparkle-project.org/documentation/) | X | [X](https://github.com/fleetdm/fleet/blob/main/ee/maintained-apps/outputs/the-unarchiver/darwin.json) [^fleet-unarchiver] | [X](https://github.com/Installomator/Installomator/blob/main/fragments/labels/theunarchiver.sh) | [X](https://formulae.brew.sh/cask/the-unarchiver) |
 | Transmit | `com.panic.Transmit` | `SUAutomaticallyUpdate=false`, `SUEnableAutomaticChecks=false` | Sparkle | [Sparkle](https://sparkle-project.org/documentation/) | X | [X](https://github.com/fleetdm/fleet/blob/main/ee/maintained-apps/outputs/transmit/darwin.json) | [X](https://github.com/Installomator/Installomator/blob/main/fragments/labels/transmit5.sh) | [X](https://formulae.brew.sh/cask/transmit) |
-| Tunnelblick | `net.tunnelblick.tunnelblick` | `updateCheckAutomatically=false` | Official [^tunnelblick] | [Tunnelblick forced prefs](https://tunnelblick.net/cPreferences.html) | — | [X](https://github.com/fleetdm/fleet/blob/main/ee/maintained-apps/outputs/tunnelblick/darwin.json) | [X](https://github.com/Installomator/Installomator/blob/main/fragments/labels/tunnelblick.sh) | [X](https://formulae.brew.sh/cask/tunnelblick) |
+| Tunnelblick | `net.tunnelblick.tunnelblick` | `updateCheckAutomatically=false` | Official [^tunnelblick] | [Tunnelblick forced prefs](https://tunnelblick.net/cPreferences.html) | X | [X](https://github.com/fleetdm/fleet/blob/main/ee/maintained-apps/outputs/tunnelblick/darwin.json) | [X](https://github.com/Installomator/Installomator/blob/main/fragments/labels/tunnelblick.sh) | [X](https://formulae.brew.sh/cask/tunnelblick) |
 | VLC | `org.videolan.vlc` | `SUAllowsAutomaticUpdates=false`, `SUEnableAutomaticChecks=false` | Sparkle | [Sparkle](https://sparkle-project.org/documentation/) | X | [X](https://github.com/fleetdm/fleet/blob/main/ee/maintained-apps/outputs/vlc/darwin.json) | [X](https://github.com/Installomator/Installomator/blob/main/fragments/labels/vlc.sh) | [X](https://formulae.brew.sh/cask/vlc) |
 | Visual Studio Code | `com.microsoft.VSCode` | `EnableFeedback=false`, `TelemetryLevel=off`, `UpdateMode=none` | Official | [VS Code enterprise policies](https://code.visualstudio.com/docs/enterprise/policies) | X | [X](https://github.com/fleetdm/fleet/blob/main/ee/maintained-apps/outputs/visual-studio-code/darwin.json) | [X](https://github.com/Installomator/Installomator/blob/main/fragments/labels/microsoftvisualstudiocode.sh) | [X](https://formulae.brew.sh/cask/visual-studio-code) |
 | Wireshark | `org.wireshark.Wireshark` | `SUAutomaticallyUpdate=false`, `SUEnableAutomaticChecks=false` | Sparkle | [Sparkle](https://sparkle-project.org/documentation/) | X | [X](https://github.com/fleetdm/fleet/blob/main/ee/maintained-apps/outputs/wireshark-app/darwin.json) | [X](https://github.com/Installomator/Installomator/blob/main/fragments/labels/wireshark.sh) | [X](https://formulae.brew.sh/cask/wireshark-app) |
@@ -151,7 +156,7 @@ PRs welcome — especially new apps and live-test results for anything marked **
 | `scripts/validate_profile.py` | Lints the profile (valid plist, unique UUIDs/identifiers). |
 | `fupdaters.py` | End-user filter tool (reads `apps.json`). |
 
-**Do not hand-edit the table** between the `APPS_TABLE`/`FOOTNOTES` markers in this file — it is generated.
+**Do not hand-edit the table** between the `APPS_TABLE`/`FOOTNOTES` markers in this file. It is generated from `apps.json`.
 
 ### Adding or changing an app
 
@@ -179,13 +184,19 @@ PRs welcome — especially new apps and live-test results for anything marked **
    - **`coverage`**: for `fleet` / `installomator` / `cask`, use the catalog's **slug/token** (string) so the `X` becomes a link — the Fleet output dir name, the Installomator label file name, or the Homebrew cask token. Use `true` if it's covered but has no per-app page (Alectrona is always `true`/`false`), or `false` if not covered. **Verify the link resolves (HTTP 200)** — some Installomator labels are aliases without their own file, and some Fleet records detect a different bundle ID than the app actually ships (see the CleanShot/Unarchiver footnotes).
    - **Footnotes** (optional): `"statusFootnotes": ["direct-build"]` adds a `[^direct-build]` marker to the Status cell; `"coverageFootnotes": {"fleet": ["fleet-cleanshot"]}` adds one to a coverage cell. Define the footnote text once in the top-level `"footnotes"` map in `apps.json`.
 
-3. **Regenerate the README and validate:**
+3. **Regenerate the README, then run the linter locally.** Regenerate first, then run the checks below — these are exactly what the **`Validate profile`** GitHub workflow ([`.github/workflows/validate.yml`](.github/workflows/validate.yml)) runs on your PR, so if they pass locally the CI linter will pass too:
 
    ```
-   python3 scripts/render_readme.py           # rewrite the generated table + footnotes
-   python3 scripts/validate_profile.py        # lint the profile (valid plist, unique UUIDs)
-   python3 scripts/render_readme.py --check    # confirm everything is in sync
+   # regenerate the generated README regions after editing apps.json / the profile
+   python3 scripts/render_readme.py
+
+   # --- the linter (same checks CI runs, in order) ---
+   plutil -lint FUpdaters.mobileconfig          # profile is a well-formed plist (CI uses xmllint; same effect)
+   python3 scripts/validate_profile.py          # valid plist + unique PayloadUUIDs / identifiers
+   python3 scripts/render_readme.py --check      # apps.json <-> profile parity + README up to date
    ```
+
+   All three are Python 3 / built-in macOS tools — nothing to install. `python3 scripts/render_readme.py --check` exits non-zero (and tells you what to fix) if `apps.json` and the profile disagree or the committed README is stale.
 
    **Commit the regenerated `README.md` alongside your `apps.json`/profile change.** `main` is protected and requires signed commits, so the README is part of your own (signed) PR — nothing is auto-committed by a bot. Only the two marked regions of the README change; leave the prose alone.
 

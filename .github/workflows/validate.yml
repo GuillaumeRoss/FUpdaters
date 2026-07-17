@@ -26,19 +26,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: XML well-formedness (xmllint)
-        run: |
-          shopt -s nullglob
-          files=(*.mobileconfig)
-          if [ ${#files[@]} -eq 0 ]; then
-            echo "No .mobileconfig files found"; exit 1
-          fi
-          for f in "${files[@]}"; do
-            echo "xmllint --noout $f"
-            xmllint --noout "$f"
-          done
-
-      - name: Structural validation (plist + payload UUIDs/identifiers)
+      # validate_profile.py parses each .mobileconfig with plistlib, which fails
+      # on malformed XML as well as on a well-formed-but-invalid plist — so it
+      # already covers what xmllint did (and xmllint is no longer preinstalled on
+      # ubuntu-latest runners).
+      - name: Structural validation (well-formed plist + unique UUIDs/identifiers)
         run: python3 scripts/validate_profile.py
 
       # The README table is generated (scripts/render_readme.py). This enforces
