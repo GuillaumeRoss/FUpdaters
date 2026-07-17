@@ -1,0 +1,38 @@
+name: Validate profile
+
+on:
+  pull_request:
+    paths:
+      - "**/*.mobileconfig"
+      - "scripts/validate_profile.py"
+      - ".github/workflows/validate.yml"
+  push:
+    branches: [main]
+    paths:
+      - "**/*.mobileconfig"
+      - "scripts/validate_profile.py"
+      - ".github/workflows/validate.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: XML well-formedness (xmllint)
+        run: |
+          shopt -s nullglob
+          files=(*.mobileconfig)
+          if [ ${#files[@]} -eq 0 ]; then
+            echo "No .mobileconfig files found"; exit 1
+          fi
+          for f in "${files[@]}"; do
+            echo "xmllint --noout $f"
+            xmllint --noout "$f"
+          done
+
+      - name: Structural validation (plist + payload UUIDs/identifiers)
+        run: python3 scripts/validate_profile.py

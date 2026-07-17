@@ -1,0 +1,467 @@
+{
+  "schemaVersion": 1,
+  "apps": [
+    {
+      "slug": "1password",
+      "name": "1Password 8",
+      "bundleId": "com.1password.1password",
+      "coverage": {
+        "alectrona": true,
+        "fleet": "1password",
+        "installomator": "1password8",
+        "cask": "1password"
+      }
+    },
+    {
+      "slug": "1password7",
+      "name": "1Password 7",
+      "bundleId": "com.agilebits.onepassword7",
+      "coverage": {
+        "alectrona": true,
+        "fleet": false,
+        "installomator": "1password7",
+        "cask": "1password@7"
+      }
+    },
+    {
+      "slug": "acorn",
+      "name": "Acorn",
+      "bundleId": "com.flyingmeat.Acorn8",
+      "coverage": {
+        "alectrona": true,
+        "fleet": "acorn",
+        "installomator": "acorn",
+        "cask": "acorn"
+      }
+    },
+    {
+      "slug": "audiohijack",
+      "name": "Audio Hijack",
+      "bundleId": "com.rogueamoeba.audiohijack",
+      "coverage": {
+        "alectrona": true,
+        "fleet": "audio-hijack",
+        "installomator": "rogueamoebaaudiohijack4",
+        "cask": "audio-hijack"
+      }
+    },
+    {
+      "slug": "bettertouchtool",
+      "name": "BetterTouchTool",
+      "bundleId": "com.hegenberg.BetterTouchTool",
+      "coverage": {
+        "alectrona": true,
+        "fleet": "bettertouchtool",
+        "installomator": "bettertouchtool",
+        "cask": "bettertouchtool"
+      }
+    },
+    {
+      "slug": "camtasia",
+      "name": "Camtasia",
+      "bundleId": "com.techsmith.camtasia",
+      "coverage": {
+        "alectrona": true,
+        "fleet": "camtasia",
+        "installomator": "camtasia",
+        "cask": "camtasia"
+      }
+    },
+    {
+      "slug": "claude-desktop",
+      "name": "Claude Desktop",
+      "bundleId": "com.anthropic.claudefordesktop",
+      "coverage": {
+        "alectrona": true,
+        "fleet": "claude",
+        "installomator": "claudedesktop",
+        "cask": "claude"
+      }
+    },
+    {
+      "slug": "cleanshotx",
+      "name": "CleanShot X",
+      "bundleId": "pl.maketheweb.cleanshotx",
+      "coverage": {
+        "alectrona": true,
+        "fleet": "cleanshot",
+        "installomator": false,
+        "cask": "cleanshot"
+      }
+    },
+    {
+      "slug": "codex",
+      "name": "Codex / ChatGPT",
+      "bundleId": "com.openai.codex",
+      "coverage": {
+        "alectrona": true,
+        "fleet": "codex-app",
+        "installomator": "codex",
+        "cask": "codex-app"
+      }
+    },
+    {
+      "slug": "cursor",
+      "name": "Cursor",
+      "bundleId": "com.todesktop.230313mzl4w4u92",
+      "coverage": {
+        "alectrona": true,
+        "fleet": "cursor",
+        "installomator": "cursorai",
+        "cask": "cursor"
+      }
+    },
+    {
+      "slug": "cyberduck",
+      "name": "Cyberduck",
+      "bundleId": "ch.sudo.cyberduck",
+      "coverage": {
+        "alectrona": true,
+        "fleet": "cyberduck",
+        "installomator": "cyberduck",
+        "cask": "cyberduck"
+      }
+    },
+    {
+      "slug": "daisydisk",
+      "name": "DaisyDisk",
+      "bundleId": "com.daisydiskapp.DaisyDiskStandAlone",
+      "coverage": {
+        "alectrona": true,
+        "fleet": "daisydisk",
+        "installomator": "daisydisk",
+        "cask": "daisydisk"
+      }
+    },
+    {
+      "slug": "firefox",
+      "name": "Firefox",
+      "bundleId": "org.mozilla.firefox",
+      "coverage": {
+        "alectrona": true,
+        "fleet": "firefox",
+        "installomator": "firefox",
+        "cask": "firefox"
+      }
+    },
+    {
+      "slug": "ghostty",
+      "name": "Ghostty",
+      "bundleId": "com.mitchellh.ghostty",
+      "coverage": {
+        "alectrona": true,
+        "fleet": "ghostty",
+        "installomator": "ghostty",
+        "cask": "ghostty"
+      }
+    },
+    {
+      "slug": "google-keystone",
+      "name": "Google Software Update (Keystone)",
+      "bundleId": "com.google.Keystone",
+      "coverage": {
+        "alectrona": true,
+        "fleet": "google-chrome",
+        "installomator": "googlechrome",
+        "cask": "google-chrome"
+      }
+    },
+    {
+      "slug": "handbrake",
+      "name": "HandBrake",
+      "bundleId": "fr.handbrake.HandBrake",
+      "coverage": {
+        "alectrona": true,
+        "fleet": "handbrake-app",
+        "installomator": "handbrake",
+        "cask": "handbrake-app"
+      }
+    },
+    {
+      "slug": "imazingprofileeditor",
+      "name": "iMazing Profile Editor",
+      "bundleId": "com.DigiDNA.iMazingProfileEditorMac",
+      "coverage": {
+        "alectrona": true,
+        "fleet": "imazing-profile-editor",
+        "installomator": "imazingprofileeditor",
+        "cask": "imazing-profile-editor"
+      }
+    },
+    {
+      "slug": "iterm2",
+      "name": "iTerm2",
+      "bundleId": "com.googlecode.iterm2",
+      "coverage": {
+        "alectrona": true,
+        "fleet": "iterm2",
+        "installomator": "iterm2",
+        "cask": "iterm2"
+      }
+    },
+    {
+      "slug": "loopback",
+      "name": "Loopback",
+      "bundleId": "com.rogueamoeba.Loopback",
+      "coverage": {
+        "alectrona": true,
+        "fleet": "loopback",
+        "installomator": "rogueamoebaloopback2",
+        "cask": "loopback"
+      }
+    },
+    {
+      "slug": "lowprofile",
+      "name": "Low Profile",
+      "bundleId": "com.ninxsoft.lowprofile",
+      "coverage": {
+        "alectrona": true,
+        "fleet": "low-profile",
+        "installomator": "lowprofile",
+        "cask": "low-profile"
+      }
+    },
+    {
+      "slug": "microsoft-autoupdate",
+      "name": "Microsoft AutoUpdate (MAU)",
+      "bundleId": "com.microsoft.autoupdate2",
+      "coverage": {
+        "alectrona": true,
+        "fleet": "microsoft-auto-update",
+        "installomator": "microsoftautoupdate",
+        "cask": "microsoft-auto-update"
+      }
+    },
+    {
+      "slug": "onedrive-updater",
+      "name": "Microsoft OneDrive Updater",
+      "bundleId": "com.microsoft.OneDriveUpdater",
+      "coverage": {
+        "alectrona": true,
+        "fleet": "onedrive",
+        "installomator": "microsoftonedrive",
+        "cask": "onedrive"
+      }
+    },
+    {
+      "slug": "mimestream",
+      "name": "Mimestream",
+      "bundleId": "com.mimestream.Mimestream",
+      "coverage": {
+        "alectrona": true,
+        "fleet": "mimestream",
+        "installomator": false,
+        "cask": "mimestream"
+      }
+    },
+    {
+      "slug": "netnewswire",
+      "name": "NetNewsWire",
+      "bundleId": "com.ranchero.NetNewsWire-Evergreen",
+      "coverage": {
+        "alectrona": true,
+        "fleet": "netnewswire",
+        "installomator": "netnewswire",
+        "cask": "netnewswire"
+      }
+    },
+    {
+      "slug": "nordvpn",
+      "name": "NordVPN",
+      "bundleId": "com.nordvpn.macos",
+      "coverage": {
+        "alectrona": true,
+        "fleet": "nordvpn",
+        "installomator": "nordvpn",
+        "cask": "nordvpn"
+      }
+    },
+    {
+      "slug": "notion",
+      "name": "Notion",
+      "bundleId": "notion.id",
+      "coverage": {
+        "alectrona": true,
+        "fleet": "notion",
+        "installomator": "notion",
+        "cask": "notion"
+      }
+    },
+    {
+      "slug": "omnifocus",
+      "name": "OmniFocus",
+      "bundleId": "com.omnigroup.OmniFocus4",
+      "coverage": {
+        "alectrona": true,
+        "fleet": "omnifocus",
+        "installomator": "omnifocus4",
+        "cask": "omnifocus"
+      }
+    },
+    {
+      "slug": "opera",
+      "name": "Opera",
+      "bundleId": "com.operasoftware.Opera",
+      "coverage": {
+        "alectrona": true,
+        "fleet": "opera",
+        "installomator": "opera",
+        "cask": "opera"
+      }
+    },
+    {
+      "slug": "orion",
+      "name": "Orion",
+      "bundleId": "com.kagi.kagimacOS",
+      "coverage": {
+        "alectrona": true,
+        "fleet": false,
+        "installomator": "orion",
+        "cask": "orion"
+      }
+    },
+    {
+      "slug": "paw",
+      "name": "Paw / RapidAPI",
+      "bundleId": "com.luckymarmot.Paw",
+      "coverage": {
+        "alectrona": true,
+        "fleet": "rapidapi",
+        "installomator": "rapidapi",
+        "cask": "rapidapi"
+      }
+    },
+    {
+      "slug": "ringcentral",
+      "name": "RingCentral",
+      "bundleId": "com.ringcentral.glip",
+      "coverage": {
+        "alectrona": true,
+        "fleet": false,
+        "installomator": "ringcentralapp",
+        "cask": "ringcentral"
+      }
+    },
+    {
+      "slug": "ringcentral-pkg",
+      "name": "RingCentral (pkg)",
+      "bundleId": "com.ringcentral.glip.pkg",
+      "coverage": {
+        "alectrona": true,
+        "fleet": false,
+        "installomator": "ringcentralapp",
+        "cask": "ringcentral"
+      }
+    },
+    {
+      "slug": "slack",
+      "name": "Slack",
+      "bundleId": "com.tinyspeck.slackmacgap",
+      "coverage": {
+        "alectrona": true,
+        "fleet": "slack",
+        "installomator": "slack",
+        "cask": "slack"
+      }
+    },
+    {
+      "slug": "swiftbar",
+      "name": "SwiftBar",
+      "bundleId": "com.ameba.SwiftBar",
+      "coverage": {
+        "alectrona": true,
+        "fleet": "swiftbar",
+        "installomator": false,
+        "cask": "swiftbar"
+      }
+    },
+    {
+      "slug": "tailscale",
+      "name": "Tailscale",
+      "bundleId": "io.tailscale.ipn.macsys",
+      "coverage": {
+        "alectrona": true,
+        "fleet": "tailscale-app",
+        "installomator": "tailscale",
+        "cask": "tailscale-app"
+      }
+    },
+    {
+      "slug": "theunarchiver",
+      "name": "The Unarchiver",
+      "bundleId": "com.macpaw.site.theunarchiver",
+      "coverage": {
+        "alectrona": true,
+        "fleet": "the-unarchiver",
+        "installomator": "theunarchiver",
+        "cask": "the-unarchiver"
+      }
+    },
+    {
+      "slug": "transmit",
+      "name": "Transmit",
+      "bundleId": "com.panic.Transmit",
+      "coverage": {
+        "alectrona": true,
+        "fleet": "transmit",
+        "installomator": "transmit5",
+        "cask": "transmit"
+      }
+    },
+    {
+      "slug": "tunnelblick",
+      "name": "Tunnelblick",
+      "bundleId": "net.tunnelblick.tunnelblick",
+      "coverage": {
+        "alectrona": false,
+        "fleet": "tunnelblick",
+        "installomator": "tunnelblick",
+        "cask": "tunnelblick"
+      }
+    },
+    {
+      "slug": "vlc",
+      "name": "VLC",
+      "bundleId": "org.videolan.VLC",
+      "coverage": {
+        "alectrona": true,
+        "fleet": "vlc",
+        "installomator": "vlc",
+        "cask": "vlc"
+      }
+    },
+    {
+      "slug": "vscode",
+      "name": "Visual Studio Code",
+      "bundleId": "com.microsoft.VSCode",
+      "coverage": {
+        "alectrona": true,
+        "fleet": "visual-studio-code",
+        "installomator": "visualstudiocode",
+        "cask": "visual-studio-code"
+      }
+    },
+    {
+      "slug": "wireshark",
+      "name": "Wireshark",
+      "bundleId": "org.wireshark.Wireshark",
+      "coverage": {
+        "alectrona": true,
+        "fleet": "wireshark-app",
+        "installomator": "wireshark",
+        "cask": "wireshark-app"
+      }
+    },
+    {
+      "slug": "zoom",
+      "name": "Zoom",
+      "bundleId": "us.zoom.config",
+      "coverage": {
+        "alectrona": true,
+        "fleet": "zoom",
+        "installomator": "zoom",
+        "cask": "zoom"
+      }
+    }
+  ]
+}
