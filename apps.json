@@ -63,7 +63,7 @@
       "coverage": {
         "alectrona": true,
         "fleet": "camtasia",
-        "installomator": "camtasia",
+        "installomator": "camtasia2026",
         "cask": "camtasia"
       }
     },
@@ -233,17 +233,6 @@
       }
     },
     {
-      "slug": "onedrive-updater",
-      "name": "Microsoft OneDrive Updater",
-      "bundleId": "com.microsoft.OneDriveUpdater",
-      "coverage": {
-        "alectrona": true,
-        "fleet": "onedrive",
-        "installomator": "microsoftonedrive",
-        "cask": "onedrive"
-      }
-    },
-    {
       "slug": "mimestream",
       "name": "Mimestream",
       "bundleId": "com.mimestream.Mimestream",
@@ -343,17 +332,6 @@
       }
     },
     {
-      "slug": "ringcentral-pkg",
-      "name": "RingCentral (pkg)",
-      "bundleId": "com.ringcentral.glip.pkg",
-      "coverage": {
-        "alectrona": true,
-        "fleet": false,
-        "installomator": "ringcentralapp",
-        "cask": "ringcentral"
-      }
-    },
-    {
       "slug": "slack",
       "name": "Slack",
       "bundleId": "com.tinyspeck.slackmacgap",
@@ -422,7 +400,7 @@
     {
       "slug": "vlc",
       "name": "VLC",
-      "bundleId": "org.videolan.VLC",
+      "bundleId": "org.videolan.vlc",
       "coverage": {
         "alectrona": true,
         "fleet": "vlc",
@@ -437,7 +415,7 @@
       "coverage": {
         "alectrona": true,
         "fleet": "visual-studio-code",
-        "installomator": "visualstudiocode",
+        "installomator": "microsoftvisualstudiocode",
         "cask": "visual-studio-code"
       }
     },

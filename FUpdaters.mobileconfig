@@ -2,39 +2,9 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>PayloadType</key>
-	<string>Configuration</string>
-	<key>PayloadVersion</key>
-	<integer>1</integer>
-	<key>PayloadIdentifier</key>
-	<string>com.fupdaters.disable-updaters</string>
-	<key>PayloadUUID</key>
-	<string>4E4F1F27-A52E-46C6-927A-699DADBA8E28</string>
-	<key>PayloadDisplayName</key>
-	<string>FUpdaters-Disable-Updaters</string>
-	<key>PayloadDescription</key>
-	<string>Disables the built-in auto-updaters for a range of third-party macOS apps.</string>
-	<key>PayloadOrganization</key>
-	<string>FUpdaters</string>
-	<key>PayloadScope</key>
-	<string>System</string>
-	<key>PayloadEnabled</key>
-	<true/>
-	<key>PayloadRemovalDisallowed</key>
-	<true/>
 	<key>PayloadContent</key>
 	<array>
 		<dict>
-			<key>PayloadType</key>
-			<string>com.apple.ManagedClient.preferences</string>
-			<key>PayloadVersion</key>
-			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.1password</string>
-			<key>PayloadUUID</key>
-			<string>95F07A37-13D8-467F-BDBE-14FEF44652C7</string>
-			<key>PayloadDisplayName</key>
-			<string>1Password - Disable Auto-Updates</string>
 			<key>PayloadContent</key>
 			<dict>
 				<key>com.1password.1password</key>
@@ -51,18 +21,18 @@
 					</array>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
+			<key>PayloadDisplayName</key>
+			<string>1Password - Disable Auto-Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.1password</string>
 			<key>PayloadType</key>
 			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>95F07A37-13D8-467F-BDBE-14FEF44652C7</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.1password7</string>
-			<key>PayloadUUID</key>
-			<string>CBA45200-B50E-4E3C-940C-A277C97A019D</string>
-			<key>PayloadDisplayName</key>
-			<string>1Password 7 - Disable Auto-Updates</string>
+		</dict>
+		<dict>
 			<key>PayloadContent</key>
 			<dict>
 				<key>com.agilebits.onepassword7</key>
@@ -79,18 +49,18 @@
 					</array>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
+			<key>PayloadDisplayName</key>
+			<string>1Password 7 - Disable Auto-Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.1password7</string>
 			<key>PayloadType</key>
 			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>CBA45200-B50E-4E3C-940C-A277C97A019D</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.acorn</string>
-			<key>PayloadUUID</key>
-			<string>85242576-B55A-4B23-B522-CA82E9BB5C6D</string>
-			<key>PayloadDisplayName</key>
-			<string>Acorn - Disable Auto-Updates</string>
+		</dict>
+		<dict>
 			<key>PayloadContent</key>
 			<dict>
 				<key>com.flyingmeat.Acorn8</key>
@@ -109,18 +79,18 @@
 					</array>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
+			<key>PayloadDisplayName</key>
+			<string>Acorn - Disable Auto-Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.acorn</string>
 			<key>PayloadType</key>
 			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>85242576-B55A-4B23-B522-CA82E9BB5C6D</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.audiohijack</string>
-			<key>PayloadUUID</key>
-			<string>DEB3E252-337F-48E5-82E9-6072938E857F</string>
-			<key>PayloadDisplayName</key>
-			<string>Audio Hijack - Disable Auto-Updates</string>
+		</dict>
+		<dict>
 			<key>PayloadContent</key>
 			<dict>
 				<key>com.rogueamoeba.audiohijack</key>
@@ -132,25 +102,25 @@
 							<dict>
 								<key>SUAutomaticallyUpdate</key>
 								<false/>
-								<key>SUEnableAutomaticChecks</key>
+								<key>versionCheckEnabled</key>
 								<false/>
 							</dict>
 						</dict>
 					</array>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
+			<key>PayloadDisplayName</key>
+			<string>Audio Hijack - Disable Auto-Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.audiohijack</string>
 			<key>PayloadType</key>
 			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>DEB3E252-337F-48E5-82E9-6072938E857F</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.bettertouchtool</string>
-			<key>PayloadUUID</key>
-			<string>CDB9F5EB-CBD8-4C35-B558-B9EFF703C021</string>
-			<key>PayloadDisplayName</key>
-			<string>BetterTouchTool - Disable Auto-Updates</string>
+		</dict>
+		<dict>
 			<key>PayloadContent</key>
 			<dict>
 				<key>com.hegenberg.BetterTouchTool</key>
@@ -169,18 +139,18 @@
 					</array>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
+			<key>PayloadDisplayName</key>
+			<string>BetterTouchTool - Disable Auto-Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.bettertouchtool</string>
 			<key>PayloadType</key>
 			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>CDB9F5EB-CBD8-4C35-B558-B9EFF703C021</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.camtasia</string>
-			<key>PayloadUUID</key>
-			<string>B6BA3565-559E-437F-9150-5C19A436A5E1</string>
-			<key>PayloadDisplayName</key>
-			<string>Camtasia - Disable Auto-Updates</string>
+		</dict>
+		<dict>
 			<key>PayloadContent</key>
 			<dict>
 				<key>com.techsmith.camtasia</key>
@@ -199,18 +169,18 @@
 					</array>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
+			<key>PayloadDisplayName</key>
+			<string>Camtasia - Disable Auto-Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.camtasia</string>
 			<key>PayloadType</key>
 			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>B6BA3565-559E-437F-9150-5C19A436A5E1</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.claude-desktop</string>
-			<key>PayloadUUID</key>
-			<string>3F7D0C3A-6739-48EF-ACEE-9C11EF3A0452</string>
-			<key>PayloadDisplayName</key>
-			<string>Claude Desktop - Disable Auto-Updates</string>
+		</dict>
+		<dict>
 			<key>PayloadContent</key>
 			<dict>
 				<key>com.anthropic.claudefordesktop</key>
@@ -227,18 +197,18 @@
 					</array>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
+			<key>PayloadDisplayName</key>
+			<string>Claude Desktop - Disable Auto-Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.claude-desktop</string>
 			<key>PayloadType</key>
 			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>3F7D0C3A-6739-48EF-ACEE-9C11EF3A0452</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.cleanshotx</string>
-			<key>PayloadUUID</key>
-			<string>9CB6F899-0C34-44D0-9F77-F2A0B74CBCB5</string>
-			<key>PayloadDisplayName</key>
-			<string>CleanShot X - Disable Auto-Updates</string>
+		</dict>
+		<dict>
 			<key>PayloadContent</key>
 			<dict>
 				<key>pl.maketheweb.cleanshotx</key>
@@ -248,29 +218,29 @@
 						<dict>
 							<key>mcx_preference_settings</key>
 							<dict>
-								<key>automaticallyCheckForUpdates</key>
-								<false/>
 								<key>SUAutomaticallyUpdate</key>
 								<false/>
 								<key>SUEnableAutomaticChecks</key>
+								<false/>
+								<key>automaticallyCheckForUpdates</key>
 								<false/>
 							</dict>
 						</dict>
 					</array>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
+			<key>PayloadDisplayName</key>
+			<string>CleanShot X - Disable Auto-Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.cleanshotx</string>
 			<key>PayloadType</key>
 			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>9CB6F899-0C34-44D0-9F77-F2A0B74CBCB5</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.codex</string>
-			<key>PayloadUUID</key>
-			<string>4BC846FF-FAF0-4C6C-9316-97F65EAC7322</string>
-			<key>PayloadDisplayName</key>
-			<string>Codex / ChatGPT (OpenAI) - Disable Auto-Updates</string>
+		</dict>
+		<dict>
 			<key>PayloadContent</key>
 			<dict>
 				<key>com.openai.codex</key>
@@ -289,18 +259,18 @@
 					</array>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
+			<key>PayloadDisplayName</key>
+			<string>Codex / ChatGPT (OpenAI) - Disable Auto-Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.codex</string>
 			<key>PayloadType</key>
 			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>4BC846FF-FAF0-4C6C-9316-97F65EAC7322</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.cursor</string>
-			<key>PayloadUUID</key>
-			<string>5395E413-27F2-4052-A251-D37C69FA78B3</string>
-			<key>PayloadDisplayName</key>
-			<string>Cursor - Disable Auto-Updates</string>
+		</dict>
+		<dict>
 			<key>PayloadContent</key>
 			<dict>
 				<key>com.todesktop.230313mzl4w4u92</key>
@@ -317,18 +287,18 @@
 					</array>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
+			<key>PayloadDisplayName</key>
+			<string>Cursor - Disable Auto-Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.cursor</string>
 			<key>PayloadType</key>
 			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>5395E413-27F2-4052-A251-D37C69FA78B3</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.cyberduck</string>
-			<key>PayloadUUID</key>
-			<string>75ACACE1-4EAB-4779-97EA-ECE8AAA02C3E</string>
-			<key>PayloadDisplayName</key>
-			<string>Cyberduck - Disable Auto-Updates</string>
+		</dict>
+		<dict>
 			<key>PayloadContent</key>
 			<dict>
 				<key>ch.sudo.cyberduck</key>
@@ -342,25 +312,23 @@
 								<false/>
 								<key>SUEnableAutomaticChecks</key>
 								<false/>
-								<key>SUFeedURL</key>
-								<string>https://localhost</string>
 							</dict>
 						</dict>
 					</array>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
+			<key>PayloadDisplayName</key>
+			<string>Cyberduck - Disable Auto-Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.cyberduck</string>
 			<key>PayloadType</key>
 			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>75ACACE1-4EAB-4779-97EA-ECE8AAA02C3E</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.daisydisk</string>
-			<key>PayloadUUID</key>
-			<string>E9F50D7C-FCF7-46A9-9E88-78FE0165053D</string>
-			<key>PayloadDisplayName</key>
-			<string>DaisyDisk - Disable Auto-Updates</string>
+		</dict>
+		<dict>
 			<key>PayloadContent</key>
 			<dict>
 				<key>com.daisydiskapp.DaisyDiskStandAlone</key>
@@ -379,18 +347,18 @@
 					</array>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
+			<key>PayloadDisplayName</key>
+			<string>DaisyDisk - Disable Auto-Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.daisydisk</string>
 			<key>PayloadType</key>
 			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>E9F50D7C-FCF7-46A9-9E88-78FE0165053D</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.firefox</string>
-			<key>PayloadUUID</key>
-			<string>CD7F39B5-BA40-4F59-83A9-926D29A03132</string>
-			<key>PayloadDisplayName</key>
-			<string>Firefox - Disable App Updates</string>
+		</dict>
+		<dict>
 			<key>PayloadContent</key>
 			<dict>
 				<key>org.mozilla.firefox</key>
@@ -400,8 +368,6 @@
 						<dict>
 							<key>mcx_preference_settings</key>
 							<dict>
-								<key>AppAutoUpdate</key>
-								<false/>
 								<key>DisableAppUpdate</key>
 								<true/>
 								<key>EnterprisePoliciesEnabled</key>
@@ -411,18 +377,18 @@
 					</array>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
+			<key>PayloadDisplayName</key>
+			<string>Firefox - Disable App Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.firefox</string>
 			<key>PayloadType</key>
 			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>CD7F39B5-BA40-4F59-83A9-926D29A03132</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.ghostty</string>
-			<key>PayloadUUID</key>
-			<string>CF3A1E00-37EE-4441-970E-41F68FDE50AA</string>
-			<key>PayloadDisplayName</key>
-			<string>Ghostty - Disable Auto Updates</string>
+		</dict>
+		<dict>
 			<key>PayloadContent</key>
 			<dict>
 				<key>com.mitchellh.ghostty</key>
@@ -439,18 +405,18 @@
 					</array>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
+			<key>PayloadDisplayName</key>
+			<string>Ghostty - Disable Auto Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.ghostty</string>
 			<key>PayloadType</key>
 			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>CF3A1E00-37EE-4441-970E-41F68FDE50AA</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.google-keystone</string>
-			<key>PayloadUUID</key>
-			<string>77CD3A87-4441-4455-99F1-09B5CBA4DAF2</string>
-			<key>PayloadDisplayName</key>
-			<string>Google Software Update (Keystone) - Disable Auto-Updates</string>
+		</dict>
+		<dict>
 			<key>PayloadContent</key>
 			<dict>
 				<key>com.google.Keystone</key>
@@ -473,18 +439,18 @@
 					</array>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
+			<key>PayloadDisplayName</key>
+			<string>Google Software Update (Keystone) - Disable Auto-Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.google-keystone</string>
 			<key>PayloadType</key>
 			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>77CD3A87-4441-4455-99F1-09B5CBA4DAF2</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.handbrake</string>
-			<key>PayloadUUID</key>
-			<string>82B7775F-C642-4247-B6B3-014153F34538</string>
-			<key>PayloadDisplayName</key>
-			<string>HandBrake - Disable Auto-Updates</string>
+		</dict>
+		<dict>
 			<key>PayloadContent</key>
 			<dict>
 				<key>fr.handbrake.HandBrake</key>
@@ -503,18 +469,18 @@
 					</array>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
+			<key>PayloadDisplayName</key>
+			<string>HandBrake - Disable Auto-Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.handbrake</string>
 			<key>PayloadType</key>
 			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>82B7775F-C642-4247-B6B3-014153F34538</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.imazingprofileeditor</string>
-			<key>PayloadUUID</key>
-			<string>FEE368D9-9CFB-4B88-AC5F-B6EC38304D44</string>
-			<key>PayloadDisplayName</key>
-			<string>iMazing Profile Editor - Disable Auto-Updates</string>
+		</dict>
+		<dict>
 			<key>PayloadContent</key>
 			<dict>
 				<key>com.DigiDNA.iMazingProfileEditorMac</key>
@@ -533,18 +499,18 @@
 					</array>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
+			<key>PayloadDisplayName</key>
+			<string>iMazing Profile Editor - Disable Auto-Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.imazingprofileeditor</string>
 			<key>PayloadType</key>
 			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>FEE368D9-9CFB-4B88-AC5F-B6EC38304D44</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.iterm2</string>
-			<key>PayloadUUID</key>
-			<string>123CE4B2-2884-4B56-B848-3FDBECEE6924</string>
-			<key>PayloadDisplayName</key>
-			<string>iTerm2 - Disable Auto-Updates</string>
+		</dict>
+		<dict>
 			<key>PayloadContent</key>
 			<dict>
 				<key>com.googlecode.iterm2</key>
@@ -563,18 +529,18 @@
 					</array>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
+			<key>PayloadDisplayName</key>
+			<string>iTerm2 - Disable Auto-Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.iterm2</string>
 			<key>PayloadType</key>
 			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>123CE4B2-2884-4B56-B848-3FDBECEE6924</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.loopback</string>
-			<key>PayloadUUID</key>
-			<string>6EC0D49E-AFE1-4A69-B669-5197695C8425</string>
-			<key>PayloadDisplayName</key>
-			<string>Loopback - Disable Auto-Updates</string>
+		</dict>
+		<dict>
 			<key>PayloadContent</key>
 			<dict>
 				<key>com.rogueamoeba.Loopback</key>
@@ -586,25 +552,25 @@
 							<dict>
 								<key>SUAutomaticallyUpdate</key>
 								<false/>
-								<key>SUEnableAutomaticChecks</key>
+								<key>versionCheckEnabled</key>
 								<false/>
 							</dict>
 						</dict>
 					</array>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
+			<key>PayloadDisplayName</key>
+			<string>Loopback - Disable Auto-Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.loopback</string>
 			<key>PayloadType</key>
 			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>6EC0D49E-AFE1-4A69-B669-5197695C8425</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.lowprofile</string>
-			<key>PayloadUUID</key>
-			<string>6F34FAFF-3D54-4DF0-B8AF-C332660CF798</string>
-			<key>PayloadDisplayName</key>
-			<string>Low Profile - Disable Auto-Updates</string>
+		</dict>
+		<dict>
 			<key>PayloadContent</key>
 			<dict>
 				<key>com.ninxsoft.lowprofile</key>
@@ -623,18 +589,18 @@
 					</array>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
+			<key>PayloadDisplayName</key>
+			<string>Low Profile - Disable Auto-Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.lowprofile</string>
 			<key>PayloadType</key>
 			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>6F34FAFF-3D54-4DF0-B8AF-C332660CF798</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.microsoft-autoupdate</string>
-			<key>PayloadUUID</key>
-			<string>5E15AD2F-A327-420D-BC69-27BF05B9BDF1</string>
-			<key>PayloadDisplayName</key>
-			<string>Microsoft AutoUpdate - Disable Auto Updates</string>
+		</dict>
+		<dict>
 			<key>PayloadContent</key>
 			<dict>
 				<key>com.microsoft.autoupdate2</key>
@@ -654,53 +620,23 @@
 								<string>Manual</string>
 								<key>IgnoreUIOpenAfterInstall</key>
 								<true/>
-								<key>StartDaemonOnAppLaunch</key>
-								<false/>
 							</dict>
 						</dict>
 					</array>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
+			<key>PayloadDisplayName</key>
+			<string>Microsoft AutoUpdate - Disable Auto Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.microsoft-autoupdate</string>
 			<key>PayloadType</key>
 			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>5E15AD2F-A327-420D-BC69-27BF05B9BDF1</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.onedrive-updater</string>
-			<key>PayloadUUID</key>
-			<string>65F82EDB-05EC-4CB5-8EE2-9D966753A42B</string>
-			<key>PayloadDisplayName</key>
-			<string>OneDrive Updater - Set Enterprise Tier</string>
-			<key>PayloadContent</key>
-			<dict>
-				<key>com.microsoft.OneDriveUpdater</key>
-				<dict>
-					<key>Forced</key>
-					<array>
-						<dict>
-							<key>mcx_preference_settings</key>
-							<dict>
-								<key>Tier</key>
-								<string>Enterprise</string>
-							</dict>
-						</dict>
-					</array>
-				</dict>
-			</dict>
 		</dict>
 		<dict>
-			<key>PayloadType</key>
-			<string>com.apple.ManagedClient.preferences</string>
-			<key>PayloadVersion</key>
-			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.mimestream</string>
-			<key>PayloadUUID</key>
-			<string>3CED70C8-8F5E-4287-9C0B-3A0EBC925A30</string>
-			<key>PayloadDisplayName</key>
-			<string>Mimestream - Disable Auto-Updates</string>
 			<key>PayloadContent</key>
 			<dict>
 				<key>com.mimestream.Mimestream</key>
@@ -719,18 +655,18 @@
 					</array>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
+			<key>PayloadDisplayName</key>
+			<string>Mimestream - Disable Auto-Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.mimestream</string>
 			<key>PayloadType</key>
 			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>3CED70C8-8F5E-4287-9C0B-3A0EBC925A30</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.netnewswire</string>
-			<key>PayloadUUID</key>
-			<string>5E4E6A32-89EE-4416-925F-173140BCB450</string>
-			<key>PayloadDisplayName</key>
-			<string>NetNewsWire - Disable Auto-Updates</string>
+		</dict>
+		<dict>
 			<key>PayloadContent</key>
 			<dict>
 				<key>com.ranchero.NetNewsWire-Evergreen</key>
@@ -749,18 +685,18 @@
 					</array>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
+			<key>PayloadDisplayName</key>
+			<string>NetNewsWire - Disable Auto-Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.netnewswire</string>
 			<key>PayloadType</key>
 			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>5E4E6A32-89EE-4416-925F-173140BCB450</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.nordvpn</string>
-			<key>PayloadUUID</key>
-			<string>A1E4354B-1FCF-4E51-916B-27FB85B6D883</string>
-			<key>PayloadDisplayName</key>
-			<string>NordVPN - Disable Auto-Updates</string>
+		</dict>
+		<dict>
 			<key>PayloadContent</key>
 			<dict>
 				<key>com.nordvpn.macos</key>
@@ -779,18 +715,18 @@
 					</array>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
+			<key>PayloadDisplayName</key>
+			<string>NordVPN - Disable Auto-Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.nordvpn</string>
 			<key>PayloadType</key>
 			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>A1E4354B-1FCF-4E51-916B-27FB85B6D883</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.notion</string>
-			<key>PayloadUUID</key>
-			<string>A7A683E4-A340-4488-A717-4417B51FCF17</string>
-			<key>PayloadDisplayName</key>
-			<string>Notion - Disable Auto-Updates</string>
+		</dict>
+		<dict>
 			<key>PayloadContent</key>
 			<dict>
 				<key>notion.id</key>
@@ -807,18 +743,18 @@
 					</array>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
+			<key>PayloadDisplayName</key>
+			<string>Notion - Disable Auto-Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.notion</string>
 			<key>PayloadType</key>
 			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>A7A683E4-A340-4488-A717-4417B51FCF17</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.omnifocus</string>
-			<key>PayloadUUID</key>
-			<string>9290B6DC-019A-4C61-9C04-A9540625D4C9</string>
-			<key>PayloadDisplayName</key>
-			<string>OmniFocus - Disable Auto-Updates</string>
+		</dict>
+		<dict>
 			<key>PayloadContent</key>
 			<dict>
 				<key>com.omnigroup.OmniFocus4</key>
@@ -828,6 +764,8 @@
 						<dict>
 							<key>mcx_preference_settings</key>
 							<dict>
+								<key>OSUCheckEnabled</key>
+								<false/>
 								<key>OSUSoftwareUpdateAtLaunch</key>
 								<false/>
 							</dict>
@@ -835,18 +773,18 @@
 					</array>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
+			<key>PayloadDisplayName</key>
+			<string>OmniFocus - Disable Auto-Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.omnifocus</string>
 			<key>PayloadType</key>
 			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>9290B6DC-019A-4C61-9C04-A9540625D4C9</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.opera</string>
-			<key>PayloadUUID</key>
-			<string>8A2E0859-8412-4B3B-BA60-A9C71302AD0F</string>
-			<key>PayloadDisplayName</key>
-			<string>Opera - Disable Auto-Updates</string>
+		</dict>
+		<dict>
 			<key>PayloadContent</key>
 			<dict>
 				<key>com.operasoftware.Opera</key>
@@ -863,18 +801,18 @@
 					</array>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
+			<key>PayloadDisplayName</key>
+			<string>Opera - Disable Auto-Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.opera</string>
 			<key>PayloadType</key>
 			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>8A2E0859-8412-4B3B-BA60-A9C71302AD0F</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.orion</string>
-			<key>PayloadUUID</key>
-			<string>4CD0F908-060C-48CD-95FC-1C2A532F6A63</string>
-			<key>PayloadDisplayName</key>
-			<string>Orion - Disable Auto-Updates</string>
+		</dict>
+		<dict>
 			<key>PayloadContent</key>
 			<dict>
 				<key>com.kagi.kagimacOS</key>
@@ -893,18 +831,18 @@
 					</array>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
+			<key>PayloadDisplayName</key>
+			<string>Orion - Disable Auto-Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.orion</string>
 			<key>PayloadType</key>
 			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>4CD0F908-060C-48CD-95FC-1C2A532F6A63</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.paw</string>
-			<key>PayloadUUID</key>
-			<string>8D2D5EA9-C8C4-4AD4-9283-807078DFE350</string>
-			<key>PayloadDisplayName</key>
-			<string>Paw / RapidAPI - Disable Auto-Updates</string>
+		</dict>
+		<dict>
 			<key>PayloadContent</key>
 			<dict>
 				<key>com.luckymarmot.Paw</key>
@@ -923,18 +861,18 @@
 					</array>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
+			<key>PayloadDisplayName</key>
+			<string>Paw / RapidAPI - Disable Auto-Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.paw</string>
 			<key>PayloadType</key>
 			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>8D2D5EA9-C8C4-4AD4-9283-807078DFE350</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.ringcentral</string>
-			<key>PayloadUUID</key>
-			<string>CBCC397E-9226-4018-9C0C-80F6794136F1</string>
-			<key>PayloadDisplayName</key>
-			<string>RingCentral - Disable Auto-Updates</string>
+		</dict>
+		<dict>
 			<key>PayloadContent</key>
 			<dict>
 				<key>com.ringcentral.glip</key>
@@ -951,46 +889,18 @@
 					</array>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
+			<key>PayloadDisplayName</key>
+			<string>RingCentral - Disable Auto-Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.ringcentral</string>
 			<key>PayloadType</key>
 			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>CBCC397E-9226-4018-9C0C-80F6794136F1</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.ringcentral-pkg</string>
-			<key>PayloadUUID</key>
-			<string>F9B81E5E-3426-4D8C-818B-0641E8DB747E</string>
-			<key>PayloadDisplayName</key>
-			<string>RingCentral - Disable Auto Launch</string>
-			<key>PayloadContent</key>
-			<dict>
-				<key>com.ringcentral.glip.pkg</key>
-				<dict>
-					<key>Forced</key>
-					<array>
-						<dict>
-							<key>mcx_preference_settings</key>
-							<dict>
-								<key>disableAutoLaunch</key>
-								<integer>1</integer>
-							</dict>
-						</dict>
-					</array>
-				</dict>
-			</dict>
 		</dict>
 		<dict>
-			<key>PayloadType</key>
-			<string>com.apple.ManagedClient.preferences</string>
-			<key>PayloadVersion</key>
-			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.slack</string>
-			<key>PayloadUUID</key>
-			<string>F4075CA6-8EB7-46C8-9A3E-7BA725ED0640</string>
-			<key>PayloadDisplayName</key>
-			<string>Slack - Disable Auto-Updates</string>
 			<key>PayloadContent</key>
 			<dict>
 				<key>com.tinyspeck.slackmacgap</key>
@@ -1002,25 +912,23 @@
 							<dict>
 								<key>AutoUpdate</key>
 								<false/>
-								<key>SlackNoAutoUpdates</key>
-								<true/>
 							</dict>
 						</dict>
 					</array>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
+			<key>PayloadDisplayName</key>
+			<string>Slack - Disable Auto-Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.slack</string>
 			<key>PayloadType</key>
 			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>F4075CA6-8EB7-46C8-9A3E-7BA725ED0640</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.swiftbar</string>
-			<key>PayloadUUID</key>
-			<string>8701FD01-9850-490C-9D8B-BB3BCE001D28</string>
-			<key>PayloadDisplayName</key>
-			<string>SwiftBar - Disable Auto-Updates</string>
+		</dict>
+		<dict>
 			<key>PayloadContent</key>
 			<dict>
 				<key>com.ameba.SwiftBar</key>
@@ -1039,18 +947,18 @@
 					</array>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
+			<key>PayloadDisplayName</key>
+			<string>SwiftBar - Disable Auto-Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.swiftbar</string>
 			<key>PayloadType</key>
 			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>8701FD01-9850-490C-9D8B-BB3BCE001D28</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.tailscale</string>
-			<key>PayloadUUID</key>
-			<string>AD5357F4-9E0C-449B-A20B-69A6BA55B981</string>
-			<key>PayloadDisplayName</key>
-			<string>Tailscale - Disable Auto-Updates</string>
+		</dict>
+		<dict>
 			<key>PayloadContent</key>
 			<dict>
 				<key>io.tailscale.ipn.macsys</key>
@@ -1069,18 +977,18 @@
 					</array>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
+			<key>PayloadDisplayName</key>
+			<string>Tailscale - Disable Auto-Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.tailscale</string>
 			<key>PayloadType</key>
 			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>AD5357F4-9E0C-449B-A20B-69A6BA55B981</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.theunarchiver</string>
-			<key>PayloadUUID</key>
-			<string>93E33005-700D-4C35-B242-831C21011AA3</string>
-			<key>PayloadDisplayName</key>
-			<string>The Unarchiver - Disable Auto-Updates</string>
+		</dict>
+		<dict>
 			<key>PayloadContent</key>
 			<dict>
 				<key>com.macpaw.site.theunarchiver</key>
@@ -1097,18 +1005,18 @@
 					</array>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
+			<key>PayloadDisplayName</key>
+			<string>The Unarchiver - Disable Auto-Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.theunarchiver</string>
 			<key>PayloadType</key>
 			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>93E33005-700D-4C35-B242-831C21011AA3</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.transmit</string>
-			<key>PayloadUUID</key>
-			<string>2269BFB7-4D42-47B4-92DD-E525C23F44BD</string>
-			<key>PayloadDisplayName</key>
-			<string>Transmit - Disable Auto-Updates</string>
+		</dict>
+		<dict>
 			<key>PayloadContent</key>
 			<dict>
 				<key>com.panic.Transmit</key>
@@ -1127,18 +1035,18 @@
 					</array>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
+			<key>PayloadDisplayName</key>
+			<string>Transmit - Disable Auto-Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.transmit</string>
 			<key>PayloadType</key>
 			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>2269BFB7-4D42-47B4-92DD-E525C23F44BD</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.tunnelblick</string>
-			<key>PayloadUUID</key>
-			<string>BBDAD157-A2FC-4F43-A350-50062D37BAD9</string>
-			<key>PayloadDisplayName</key>
-			<string>Tunnelblick - Disable Auto-Updates</string>
+		</dict>
+		<dict>
 			<key>PayloadContent</key>
 			<dict>
 				<key>net.tunnelblick.tunnelblick</key>
@@ -1148,32 +1056,28 @@
 						<dict>
 							<key>mcx_preference_settings</key>
 							<dict>
-								<key>SUAutomaticallyUpdate</key>
+								<key>updateCheckAutomatically</key>
 								<false/>
-								<key>SUEnableAutomaticChecks</key>
-								<false/>
-								<key>SUFeedURL</key>
-								<string>https://localhost</string>
 							</dict>
 						</dict>
 					</array>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
+			<key>PayloadDisplayName</key>
+			<string>Tunnelblick - Disable Auto-Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.tunnelblick</string>
 			<key>PayloadType</key>
 			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>BBDAD157-A2FC-4F43-A350-50062D37BAD9</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.vlc</string>
-			<key>PayloadUUID</key>
-			<string>4915FDFD-BFBF-4A73-B390-C99ED86F838A</string>
-			<key>PayloadDisplayName</key>
-			<string>VLC - Disable Auto-Updates</string>
+		</dict>
+		<dict>
 			<key>PayloadContent</key>
 			<dict>
-				<key>org.videolan.VLC</key>
+				<key>org.videolan.vlc</key>
 				<dict>
 					<key>Forced</key>
 					<array>
@@ -1189,18 +1093,18 @@
 					</array>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
+			<key>PayloadDisplayName</key>
+			<string>VLC - Disable Auto-Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.vlc</string>
 			<key>PayloadType</key>
 			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>4915FDFD-BFBF-4A73-B390-C99ED86F838A</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.vscode</string>
-			<key>PayloadUUID</key>
-			<string>7078BBBB-D543-46C4-A317-F5936306F156</string>
-			<key>PayloadDisplayName</key>
-			<string>Visual Studio Code - Disable Auto Updates</string>
+		</dict>
+		<dict>
 			<key>PayloadContent</key>
 			<dict>
 				<key>com.microsoft.VSCode</key>
@@ -1221,18 +1125,18 @@
 					</array>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
+			<key>PayloadDisplayName</key>
+			<string>Visual Studio Code - Disable Auto Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.vscode</string>
 			<key>PayloadType</key>
 			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>7078BBBB-D543-46C4-A317-F5936306F156</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.wireshark</string>
-			<key>PayloadUUID</key>
-			<string>3E06064D-2F46-4096-BFC7-80688D5E2575</string>
-			<key>PayloadDisplayName</key>
-			<string>Wireshark - Disable Auto-Updates</string>
+		</dict>
+		<dict>
 			<key>PayloadContent</key>
 			<dict>
 				<key>org.wireshark.Wireshark</key>
@@ -1251,18 +1155,18 @@
 					</array>
 				</dict>
 			</dict>
-		</dict>
-		<dict>
+			<key>PayloadDisplayName</key>
+			<string>Wireshark - Disable Auto-Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.wireshark</string>
 			<key>PayloadType</key>
 			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>3E06064D-2F46-4096-BFC7-80688D5E2575</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>PayloadIdentifier</key>
-			<string>com.fupdaters.disable-updaters.zoom</string>
-			<key>PayloadUUID</key>
-			<string>06C555E7-D245-405A-95BA-C9C7BAB637B6</string>
-			<key>PayloadDisplayName</key>
-			<string>Zoom - Disable Auto-Updates</string>
+		</dict>
+		<dict>
 			<key>PayloadContent</key>
 			<dict>
 				<key>us.zoom.config</key>
@@ -1274,14 +1178,42 @@
 							<dict>
 								<key>AU2_EnableAutoUpdate</key>
 								<false/>
-								<key>ZAutoUpdate</key>
-								<false/>
 							</dict>
 						</dict>
 					</array>
 				</dict>
 			</dict>
+			<key>PayloadDisplayName</key>
+			<string>Zoom - Disable Auto-Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.fupdaters.disable-updaters.zoom</string>
+			<key>PayloadType</key>
+			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>06C555E7-D245-405A-95BA-C9C7BAB637B6</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
 		</dict>
 	</array>
+	<key>PayloadDescription</key>
+	<string>Disables the built-in auto-updaters for a range of third-party macOS apps.</string>
+	<key>PayloadDisplayName</key>
+	<string>FUpdaters-Disable-Updaters</string>
+	<key>PayloadEnabled</key>
+	<true/>
+	<key>PayloadIdentifier</key>
+	<string>com.fupdaters.disable-updaters</string>
+	<key>PayloadOrganization</key>
+	<string>FUpdaters</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>4E4F1F27-A52E-46C6-927A-699DADBA8E28</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
 </dict>
 </plist>
