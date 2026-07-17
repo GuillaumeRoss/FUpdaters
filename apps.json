@@ -498,7 +498,7 @@
         "tunnelblick"
       ],
       "coverage": {
-        "alectrona": false,
+        "alectrona": true,
         "fleet": "tunnelblick",
         "installomator": "tunnelblick",
         "cask": "tunnelblick"
