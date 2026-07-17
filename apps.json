@@ -1,10 +1,29 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
+  "footnotes": {
+    "1password": "`updates.autoUpdate` applies to the direct-download `.app` build. For PKG/MDM deployments 1Password expects updates to be pushed via your MDM, and this key does not apply there. Source: [1Password MDM](https://support.1password.com/mobile-device-management/).",
+    "rogueamoeba": "**Untested.** Audio Hijack and Loopback use Rogue Amoeba's own periodic version check (`com.rogueamoeba.ptappcontroller.versionCheck`), not standard Sparkle scheduling — so `SUEnableAutomaticChecks` does not stop it. `versionCheckEnabled=false` is the observed native preference (from binary inspection) but has **not** been verified to hold as a forced managed preference. Test before relying on it.",
+    "codex": "The shared OpenAI updater backs both the standalone **Codex** app and the current **ChatGPT** desktop app — both report bundle ID `com.openai.codex`, so this one payload covers both. The older ChatGPT \"Classic\" build used a different ID and is not covered.",
+    "keystone": "Keystone is Google's **shared updater**, not an app — this payload disables auto-updates for every Keystone-managed app (Chrome, Earth, Drive, …). The coverage links point to Google Chrome as the representative catalog entry.",
+    "mau": "`HowToCheck=Manual` is **current and documented** — the *deprecated* value is `Automatic` (replaced by `AutomaticCheck`). In `Manual` mode MAU still updates **itself**, but stops auto-updating the Office apps. The undocumented `StartDaemonOnAppLaunch` key was removed; the remaining keys (`AcknowledgedDataCollectionPolicy`, `DisableOptInNotification`, `EnableCheckForUpdatesButton`, `IgnoreUIOpenAfterInstall`) are documented MAU preferences. Source: [MAU preferences](https://learn.microsoft.com/en-us/microsoft-365-apps/mac/mau-preferences).",
+    "omnifocus": "OmniFocus uses Omni's own `OmniSoftwareUpdate` framework (not Sparkle). `OSUCheckEnabled=false` is the master toggle that stops both the launch-time and the periodic (~24h) check; `OSUSoftwareUpdateAtLaunch=false` alone only stops the launch check. Keys are confirmed from Omni's [open-source framework](https://github.com/omnigroup/OmniGroup/blob/main/Frameworks/OmniSoftwareUpdate/OSUPreferences.m), not vendor MDM docs, and are not live-tested here.",
+    "opera": "`OPDisableAutoUpdate` comes from an Opera-**staff forum post**, not an official enterprise deployment doc, and has not been re-verified on current Opera (v133).",
+    "orion": "Covers the stable Orion build (`com.kagi.kagimacOS`). Orion **RC** uses `com.kagi.kagimacOS.RC` and is **not** covered by this payload.",
+    "tunnelblick": "Uses Tunnelblick's documented forced preference `updateCheckAutomatically=false`, which replaces the earlier `SUFeedURL=https://localhost` hack. `updateFeedURL` is not needed to disable checks. Source: [Tunnelblick preferences](https://tunnelblick.net/cPreferences.html).",
+    "direct-build": "Applies to the **direct-download** build only. The Mac App Store build updates through the App Store and ignores these managed preferences.",
+    "fleet-cleanshot": "Fleet ships a CleanShot X package, but its detection query checks bundle ID `com.getcleanshot.app` while current builds are `pl.maketheweb.cleanshotx` — so Fleet's install/patch **detection** may be unreliable even though a package exists. (Upstream Fleet issue, not this profile.)",
+    "fleet-unarchiver": "Fleet's detection query checks bundle ID `cx.c3.theunarchiver`, while the direct-download build is `com.macpaw.site.theunarchiver` — Fleet detection may not match the direct build. (Upstream Fleet issue.)"
+  },
   "apps": [
     {
       "slug": "1password",
       "name": "1Password 8",
       "bundleId": "com.1password.1password",
+      "status": "Official",
+      "docs": "[1Password MDM](https://support.1password.com/mobile-device-management/)",
+      "statusFootnotes": [
+        "1password"
+      ],
       "coverage": {
         "alectrona": true,
         "fleet": "1password",
@@ -16,6 +35,7 @@
       "slug": "1password7",
       "name": "1Password 7",
       "bundleId": "com.agilebits.onepassword7",
+      "status": "Community",
       "coverage": {
         "alectrona": true,
         "fleet": false,
@@ -27,6 +47,7 @@
       "slug": "acorn",
       "name": "Acorn",
       "bundleId": "com.flyingmeat.Acorn8",
+      "status": "Sparkle",
       "coverage": {
         "alectrona": true,
         "fleet": "acorn",
@@ -38,6 +59,10 @@
       "slug": "audiohijack",
       "name": "Audio Hijack",
       "bundleId": "com.rogueamoeba.audiohijack",
+      "status": "Untested",
+      "statusFootnotes": [
+        "rogueamoeba"
+      ],
       "coverage": {
         "alectrona": true,
         "fleet": "audio-hijack",
@@ -49,6 +74,7 @@
       "slug": "bettertouchtool",
       "name": "BetterTouchTool",
       "bundleId": "com.hegenberg.BetterTouchTool",
+      "status": "Sparkle",
       "coverage": {
         "alectrona": true,
         "fleet": "bettertouchtool",
@@ -60,6 +86,7 @@
       "slug": "camtasia",
       "name": "Camtasia",
       "bundleId": "com.techsmith.camtasia",
+      "status": "Sparkle",
       "coverage": {
         "alectrona": true,
         "fleet": "camtasia",
@@ -71,6 +98,8 @@
       "slug": "claude-desktop",
       "name": "Claude Desktop",
       "bundleId": "com.anthropic.claudefordesktop",
+      "status": "Official",
+      "docs": "[Claude enterprise config](https://support.claude.com/en/articles/12622667-enterprise-configuration-for-claude-desktop)",
       "coverage": {
         "alectrona": true,
         "fleet": "claude",
@@ -82,17 +111,27 @@
       "slug": "cleanshotx",
       "name": "CleanShot X",
       "bundleId": "pl.maketheweb.cleanshotx",
+      "status": "Sparkle",
       "coverage": {
         "alectrona": true,
         "fleet": "cleanshot",
         "installomator": false,
         "cask": "cleanshot"
+      },
+      "coverageFootnotes": {
+        "fleet": [
+          "fleet-cleanshot"
+        ]
       }
     },
     {
       "slug": "codex",
       "name": "Codex / ChatGPT",
       "bundleId": "com.openai.codex",
+      "status": "Sparkle",
+      "statusFootnotes": [
+        "codex"
+      ],
       "coverage": {
         "alectrona": true,
         "fleet": "codex-app",
@@ -104,6 +143,8 @@
       "slug": "cursor",
       "name": "Cursor",
       "bundleId": "com.todesktop.230313mzl4w4u92",
+      "status": "Official",
+      "docs": "[Cursor deployment](https://cursor.com/docs/enterprise/deployment-patterns)",
       "coverage": {
         "alectrona": true,
         "fleet": "cursor",
@@ -115,6 +156,7 @@
       "slug": "cyberduck",
       "name": "Cyberduck",
       "bundleId": "ch.sudo.cyberduck",
+      "status": "Sparkle",
       "coverage": {
         "alectrona": true,
         "fleet": "cyberduck",
@@ -126,6 +168,7 @@
       "slug": "daisydisk",
       "name": "DaisyDisk",
       "bundleId": "com.daisydiskapp.DaisyDiskStandAlone",
+      "status": "Sparkle",
       "coverage": {
         "alectrona": true,
         "fleet": "daisydisk",
@@ -137,6 +180,8 @@
       "slug": "firefox",
       "name": "Firefox",
       "bundleId": "org.mozilla.firefox",
+      "status": "Official",
+      "docs": "[Mozilla policies](https://mozilla.github.io/policy-templates/#disableappupdate)",
       "coverage": {
         "alectrona": true,
         "fleet": "firefox",
@@ -148,6 +193,7 @@
       "slug": "ghostty",
       "name": "Ghostty",
       "bundleId": "com.mitchellh.ghostty",
+      "status": "Sparkle",
       "coverage": {
         "alectrona": true,
         "fleet": "ghostty",
@@ -159,6 +205,11 @@
       "slug": "google-keystone",
       "name": "Google Software Update (Keystone)",
       "bundleId": "com.google.Keystone",
+      "status": "Official",
+      "docs": "[Chrome Enterprise update policy](https://support.google.com/chrome/a/answer/7591084)",
+      "statusFootnotes": [
+        "keystone"
+      ],
       "coverage": {
         "alectrona": true,
         "fleet": "google-chrome",
@@ -170,6 +221,7 @@
       "slug": "handbrake",
       "name": "HandBrake",
       "bundleId": "fr.handbrake.HandBrake",
+      "status": "Sparkle",
       "coverage": {
         "alectrona": true,
         "fleet": "handbrake-app",
@@ -181,6 +233,7 @@
       "slug": "imazingprofileeditor",
       "name": "iMazing Profile Editor",
       "bundleId": "com.DigiDNA.iMazingProfileEditorMac",
+      "status": "Sparkle",
       "coverage": {
         "alectrona": true,
         "fleet": "imazing-profile-editor",
@@ -192,6 +245,7 @@
       "slug": "iterm2",
       "name": "iTerm2",
       "bundleId": "com.googlecode.iterm2",
+      "status": "Sparkle",
       "coverage": {
         "alectrona": true,
         "fleet": "iterm2",
@@ -203,6 +257,10 @@
       "slug": "loopback",
       "name": "Loopback",
       "bundleId": "com.rogueamoeba.Loopback",
+      "status": "Untested",
+      "statusFootnotes": [
+        "rogueamoeba"
+      ],
       "coverage": {
         "alectrona": true,
         "fleet": "loopback",
@@ -214,6 +272,7 @@
       "slug": "lowprofile",
       "name": "Low Profile",
       "bundleId": "com.ninxsoft.lowprofile",
+      "status": "Sparkle",
       "coverage": {
         "alectrona": true,
         "fleet": "low-profile",
@@ -225,6 +284,11 @@
       "slug": "microsoft-autoupdate",
       "name": "Microsoft AutoUpdate (MAU)",
       "bundleId": "com.microsoft.autoupdate2",
+      "status": "Official",
+      "docs": "[MAU preferences](https://learn.microsoft.com/en-us/microsoft-365-apps/mac/mau-preferences)",
+      "statusFootnotes": [
+        "mau"
+      ],
       "coverage": {
         "alectrona": true,
         "fleet": "microsoft-auto-update",
@@ -236,6 +300,7 @@
       "slug": "mimestream",
       "name": "Mimestream",
       "bundleId": "com.mimestream.Mimestream",
+      "status": "Sparkle",
       "coverage": {
         "alectrona": true,
         "fleet": "mimestream",
@@ -247,6 +312,7 @@
       "slug": "netnewswire",
       "name": "NetNewsWire",
       "bundleId": "com.ranchero.NetNewsWire-Evergreen",
+      "status": "Sparkle",
       "coverage": {
         "alectrona": true,
         "fleet": "netnewswire",
@@ -258,6 +324,7 @@
       "slug": "nordvpn",
       "name": "NordVPN",
       "bundleId": "com.nordvpn.macos",
+      "status": "Sparkle",
       "coverage": {
         "alectrona": true,
         "fleet": "nordvpn",
@@ -269,6 +336,8 @@
       "slug": "notion",
       "name": "Notion",
       "bundleId": "notion.id",
+      "status": "Official",
+      "docs": "[Notion macOS deployment](https://www.notion.com/help/deploy-notion-for-macos)",
       "coverage": {
         "alectrona": true,
         "fleet": "notion",
@@ -280,6 +349,11 @@
       "slug": "omnifocus",
       "name": "OmniFocus",
       "bundleId": "com.omnigroup.OmniFocus4",
+      "status": "Community",
+      "docs": "[Omni source](https://github.com/omnigroup/OmniGroup/blob/main/Frameworks/OmniSoftwareUpdate/OSUPreferences.m)",
+      "statusFootnotes": [
+        "omnifocus"
+      ],
       "coverage": {
         "alectrona": true,
         "fleet": "omnifocus",
@@ -291,6 +365,11 @@
       "slug": "opera",
       "name": "Opera",
       "bundleId": "com.operasoftware.Opera",
+      "status": "Community",
+      "docs": "[Opera staff forum](https://forums.opera.com/topic/11657/)",
+      "statusFootnotes": [
+        "opera"
+      ],
       "coverage": {
         "alectrona": true,
         "fleet": "opera",
@@ -302,6 +381,10 @@
       "slug": "orion",
       "name": "Orion",
       "bundleId": "com.kagi.kagimacOS",
+      "status": "Sparkle",
+      "statusFootnotes": [
+        "orion"
+      ],
       "coverage": {
         "alectrona": true,
         "fleet": false,
@@ -313,6 +396,7 @@
       "slug": "paw",
       "name": "Paw / RapidAPI",
       "bundleId": "com.luckymarmot.Paw",
+      "status": "Sparkle",
       "coverage": {
         "alectrona": true,
         "fleet": "rapidapi",
@@ -324,6 +408,7 @@
       "slug": "ringcentral",
       "name": "RingCentral",
       "bundleId": "com.ringcentral.glip",
+      "status": "Community",
       "coverage": {
         "alectrona": true,
         "fleet": false,
@@ -335,6 +420,8 @@
       "slug": "slack",
       "name": "Slack",
       "bundleId": "com.tinyspeck.slackmacgap",
+      "status": "Official",
+      "docs": "[Slack app configuration](https://slack.com/help/articles/11906214948755-Manage-desktop-app-configurations)",
       "coverage": {
         "alectrona": true,
         "fleet": "slack",
@@ -346,6 +433,7 @@
       "slug": "swiftbar",
       "name": "SwiftBar",
       "bundleId": "com.ameba.SwiftBar",
+      "status": "Sparkle",
       "coverage": {
         "alectrona": true,
         "fleet": "swiftbar",
@@ -357,6 +445,10 @@
       "slug": "tailscale",
       "name": "Tailscale",
       "bundleId": "io.tailscale.ipn.macsys",
+      "status": "Sparkle",
+      "statusFootnotes": [
+        "direct-build"
+      ],
       "coverage": {
         "alectrona": true,
         "fleet": "tailscale-app",
@@ -368,17 +460,27 @@
       "slug": "theunarchiver",
       "name": "The Unarchiver",
       "bundleId": "com.macpaw.site.theunarchiver",
+      "status": "Sparkle",
+      "statusFootnotes": [
+        "direct-build"
+      ],
       "coverage": {
         "alectrona": true,
         "fleet": "the-unarchiver",
         "installomator": "theunarchiver",
         "cask": "the-unarchiver"
+      },
+      "coverageFootnotes": {
+        "fleet": [
+          "fleet-unarchiver"
+        ]
       }
     },
     {
       "slug": "transmit",
       "name": "Transmit",
       "bundleId": "com.panic.Transmit",
+      "status": "Sparkle",
       "coverage": {
         "alectrona": true,
         "fleet": "transmit",
@@ -390,6 +492,11 @@
       "slug": "tunnelblick",
       "name": "Tunnelblick",
       "bundleId": "net.tunnelblick.tunnelblick",
+      "status": "Official",
+      "docs": "[Tunnelblick forced prefs](https://tunnelblick.net/cPreferences.html)",
+      "statusFootnotes": [
+        "tunnelblick"
+      ],
       "coverage": {
         "alectrona": false,
         "fleet": "tunnelblick",
@@ -401,6 +508,7 @@
       "slug": "vlc",
       "name": "VLC",
       "bundleId": "org.videolan.vlc",
+      "status": "Sparkle",
       "coverage": {
         "alectrona": true,
         "fleet": "vlc",
@@ -412,6 +520,8 @@
       "slug": "vscode",
       "name": "Visual Studio Code",
       "bundleId": "com.microsoft.VSCode",
+      "status": "Official",
+      "docs": "[VS Code enterprise policies](https://code.visualstudio.com/docs/enterprise/policies)",
       "coverage": {
         "alectrona": true,
         "fleet": "visual-studio-code",
@@ -423,6 +533,7 @@
       "slug": "wireshark",
       "name": "Wireshark",
       "bundleId": "org.wireshark.Wireshark",
+      "status": "Sparkle",
       "coverage": {
         "alectrona": true,
         "fleet": "wireshark-app",
@@ -434,6 +545,8 @@
       "slug": "zoom",
       "name": "Zoom",
       "bundleId": "us.zoom.config",
+      "status": "Official",
+      "docs": "[Zoom auto-update policy](https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0058493)",
       "coverage": {
         "alectrona": true,
         "fleet": "zoom",

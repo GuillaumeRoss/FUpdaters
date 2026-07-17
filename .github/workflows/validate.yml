@@ -4,13 +4,17 @@ on:
   pull_request:
     paths:
       - "**/*.mobileconfig"
-      - "scripts/validate_profile.py"
+      - "apps.json"
+      - "README.md"
+      - "scripts/**"
       - ".github/workflows/validate.yml"
   push:
     branches: [main]
     paths:
       - "**/*.mobileconfig"
-      - "scripts/validate_profile.py"
+      - "apps.json"
+      - "README.md"
+      - "scripts/**"
       - ".github/workflows/validate.yml"
 
 permissions:
@@ -36,3 +40,6 @@ jobs:
 
       - name: Structural validation (plist + payload UUIDs/identifiers)
         run: python3 scripts/validate_profile.py
+
+      - name: README in sync (apps.json <-> profile parity + generated table)
+        run: python3 scripts/render_readme.py --check
