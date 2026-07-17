@@ -41,18 +41,9 @@ jobs:
       - name: Structural validation (plist + payload UUIDs/identifiers)
         run: python3 scripts/validate_profile.py
 
-      # Enforces apps.json <-> profile parity (hard fail) and prints a preview of
-      # the README the merge will produce. Does NOT require the PR to have
-      # regenerated README — main regenerates it on merge (see render-readme.yml).
-      - name: Preview README (dry run)
-        run: |
-          set -o pipefail
-          python3 scripts/render_readme.py --dry-run | tee /tmp/readme.diff
-          {
-            echo '### README preview'
-            echo 'This is what the table will look like after merge (main regenerates it automatically).'
-            echo ''
-            echo '```diff'
-            cat /tmp/readme.diff
-            echo '```'
-          } >> "$GITHUB_STEP_SUMMARY"
+      # The README table is generated (scripts/render_readme.py). This enforces
+      # that the committed README matches apps.json + the profile, and that
+      # apps.json and the profile reference the same set of apps. If it fails,
+      # run `python3 scripts/render_readme.py` and commit the result.
+      - name: README in sync (parity + generated table up to date)
+        run: python3 scripts/render_readme.py --check
