@@ -148,6 +148,9 @@ Source flags are OR'd (an app is kept if any selected tool covers it). Coverage 
 
 PRs welcome — especially new apps and live-test results for anything marked **Untested** or **Community**.
 
+> [!TIP]
+> **Using [Claude Code](https://claude.com/claude-code)?** This repo ships an `add-app` skill ([`.claude/skills/add-app/`](.claude/skills/add-app/SKILL.md)) that walks Claude through the whole thing — finding the right disable key, editing the profile + `apps.json`, verifying catalog coverage, regenerating the README, and opening a PR. Just open the repo in Claude Code and ask it to add an app (e.g. *"add Transmit to the profile"*); it will pick up the skill automatically. The steps below are the same process done by hand.
+
 **The pieces**
 
 | File | Role |
