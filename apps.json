@@ -12,7 +12,8 @@
     "tunnelblick": "Uses Tunnelblick's documented forced preference `updateCheckAutomatically=false`, which replaces the earlier `SUFeedURL=https://localhost` hack. `updateFeedURL` is not needed to disable checks. Source: [Tunnelblick preferences](https://tunnelblick.net/cPreferences.html).",
     "direct-build": "Applies to the **direct-download** build only. The Mac App Store build updates through the App Store and ignores these managed preferences.",
     "fleet-cleanshot": "Fleet ships a CleanShot X package, but its detection query checks bundle ID `com.getcleanshot.app` while current builds are `pl.maketheweb.cleanshotx` — so Fleet's install/patch **detection** may be unreliable even though a package exists. (Upstream Fleet issue, not this profile.)",
-    "fleet-unarchiver": "Fleet's detection query checks bundle ID `cx.c3.theunarchiver`, while the direct-download build is `com.macpaw.site.theunarchiver` — Fleet detection may not match the direct build. (Upstream Fleet issue.)"
+    "fleet-unarchiver": "Fleet's detection query checks bundle ID `cx.c3.theunarchiver`, while the direct-download build is `com.macpaw.site.theunarchiver` — Fleet detection may not match the direct build. (Upstream Fleet issue.)",
+    "suspiciouspackage": "**Untested.** Suspicious Package uses Mothers Ruin's own `MRSUpdateChecker` (not Sparkle), and there is no vendor-documented managed key. `UpdateCheckDisabled=true` (domain `com.mothersruin.SuspiciousPackageApp`) is a candidate derived from framework binary inspection and has **not** been verified to stop the update check as a forced managed preference — confirm via Preferences ▸ Update, or a live test, before relying on it."
   },
   "apps": [
     {
@@ -427,6 +428,21 @@
         "fleet": "slack",
         "installomator": "slack",
         "cask": "slack"
+      }
+    },
+    {
+      "slug": "suspiciouspackage",
+      "name": "Suspicious Package",
+      "bundleId": "com.mothersruin.SuspiciousPackageApp",
+      "status": "Untested",
+      "statusFootnotes": [
+        "suspiciouspackage"
+      ],
+      "coverage": {
+        "alectrona": true,
+        "fleet": "suspicious-package",
+        "installomator": "suspiciouspackage",
+        "cask": "suspicious-package"
       }
     },
     {
